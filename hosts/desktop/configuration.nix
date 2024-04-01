@@ -1,9 +1,5 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, inputs,  ... }:
 
 {
@@ -110,20 +106,10 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  
+  # Host specific packages
   environment.systemPackages = with pkgs; [
-     git
-     wget
-     neovim
-     xdg-desktop-portal-hyprland
-     waybar
-     discord
-     spotify
-     librewolf
-     steam
-     btop
-     kitty
-     fish
-     tmux
+    steam
   ];
   
   # Home Manager {{{
