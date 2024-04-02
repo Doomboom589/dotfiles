@@ -100,6 +100,17 @@
 
   # }}}
 
+  # Home Manager {{{
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "oliver" = import ../../modules/home.nix;
+    };
+  };
+
+  # }}}
+
   # Packages {{{
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -112,17 +123,6 @@
     steam
   ];
   
-  # Home Manager {{{
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "oliver" = import ./home.nix;
-    };
-  };
-
-  # }}}
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -142,7 +142,7 @@
   };
 
   programs.waybar.enable = true;
-  programs.wofi.enable = true;
+  #programs.wofi.enable = true;
   # }}}
 
   # Services {{{
