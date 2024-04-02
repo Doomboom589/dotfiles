@@ -140,6 +140,9 @@
   programs.hyprland = {
     enable = true;
   };
+
+  programs.waybar.enable = true;
+  programs.wofi.enable = true;
   # }}}
 
   # Services {{{

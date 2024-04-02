@@ -27,6 +27,8 @@
     kitty
     fish
     tmux
+    wofi
+    wlogout
   ];
 
   home.file = {
