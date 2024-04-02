@@ -13,7 +13,7 @@
     };
 
     # Nixvim
-    nixvim-flake.url = "./modules/programs/nixvim";
+    nixvim-flake.url = "git+file:///home/oliver/nixos/modules/programs/nixvim";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: 
