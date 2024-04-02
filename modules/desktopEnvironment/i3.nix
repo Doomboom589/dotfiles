@@ -133,6 +133,9 @@ in {
 
 	# Modes
 	"${mod}+r" = "mode \"resize\"";
+
+	# Restart i3
+	"${mod}+Shift+r" = "restart";
       };
 
 # }}}
