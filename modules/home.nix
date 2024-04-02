@@ -11,26 +11,37 @@
 
 # }}}
 
+# Imports {{{
+
+  imports = [
+    ./deskenv/default.nix
+  ];
+
+# }}}
+
 # Packages {{{
  
   # Common packages 
   home.packages = with pkgs; [
+    # Terminal
     git
     wget
-    xdg-desktop-portal-hyprland
-    waybar
+    fish
+    tmux
+    kitty
+    btop
+    # Applications
+    steam
     discord
     spotify
     librewolf
-    btop
-    kitty
-    fish
-    tmux
-    wofi
-    wlogout
   ];
 
   home.file = {
+  };
+
+  nixpkgs.config = {
+    allowUnfree = true;
   };
 
 # }}}

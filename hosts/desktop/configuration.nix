@@ -27,7 +27,7 @@
    nvidiaSettings = true;
 
    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-   package = config.boot.kernelPackages.nvidiaPackages.stable;
+   package = config.boot.kernelPackages.nvidiaPackages.production;
   };
 
   # }}}
@@ -118,9 +118,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   
-  # Host specific packages
   environment.systemPackages = with pkgs; [
-    steam
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
@@ -137,12 +135,6 @@
     enable = true;
   };
 
-  programs.hyprland = {
-    enable = true;
-  };
-
-  programs.waybar.enable = true;
-  #programs.wofi.enable = true;
   # }}}
 
   # Services {{{
