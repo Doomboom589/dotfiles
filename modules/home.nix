@@ -17,7 +17,6 @@
   home.packages = [
     git
     wget
-    neovim
     xdg-desktop-portal-hyprland
     waybar
     discord
