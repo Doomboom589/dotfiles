@@ -14,7 +14,7 @@
 # Packages {{{
  
   # Common packages 
-  home.packages = [
+  home.packages = with pkgs; [
     git
     wget
     xdg-desktop-portal-hyprland
