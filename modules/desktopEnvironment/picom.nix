@@ -35,8 +35,8 @@
       "name = 'Notification'"
     ];
     shadowOffsets = [
-      -25
-      -25
+      "-25"
+      "-25"
     ];
     shadowOpacity = 0.75;
     vSync = true;

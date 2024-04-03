@@ -77,7 +77,7 @@ in
 	height = "23pt";
 	offset-x = "98%";
 	offset-y = "8pt";
-	border-size = 5pt;
+	border-size = "5pt";
 	border-color = "${bg-4}";
 	line-size = "1pt";
 	padding-left = "0pt";
@@ -109,7 +109,7 @@ in
 	height = "23pt";
 	offset-x = "98%";
 	offset-y = "8pt";
-	border-size = 5pt;
+	border-size = "5pt";
 	border-color = "${bg-4}";
 	line-size = "1pt";
 	padding-left = "0pt";
@@ -350,5 +350,5 @@ in
 # }}}
 
     };
-  }
+  };
 }
