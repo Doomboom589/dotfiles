@@ -31,9 +31,6 @@
       ];
     };
     shadow = true;
-    ShadowExclude = [
-      "name = 'Notification'"
-    ];
     shadowOffsets = [
       "-25"
       "-25"
