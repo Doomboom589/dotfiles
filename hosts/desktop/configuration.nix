@@ -153,7 +153,7 @@
 	extraPackages = [
 	  pkgs.catppuccin-sddm-corners
 	];
-        theme = "catppuccin-sddm-corners"
+        theme = "catppuccin-sddm-corners";
       };
     };
   };
