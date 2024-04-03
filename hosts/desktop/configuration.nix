@@ -129,7 +129,6 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.fish.enable = true;
   programs.git.enable = true;
   programs.neovim = {
     enable = true;
