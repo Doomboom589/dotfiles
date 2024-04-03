@@ -64,7 +64,7 @@ in
       };
 
       "bar/primary-top" = {
-	monitor = "${env:MONITOR:DP1}";
+	monitor = "${env:MONITOR:DP0}";
 	monitor-exact = true;
 	overide-redirect = false;
 	enable-ipc = true;
@@ -96,7 +96,7 @@ in
       };
 
       "bar/secondary-top" = {
-	monitor = "${env:MONITOR:DP3}";
+	monitor = "${env:MONITOR:DP4}";
 	monitor-exact = true;
 	overide-redirect = true;
 	enable-ipc = true;
