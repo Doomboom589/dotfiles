@@ -14,7 +14,7 @@
     ];
     inactiveOpacity = 1.0;
     menuOpacity = 0.8;
-    opacityRule = [
+    opacityRules = [
       "85:class_g = 'kitty'"
     ];
     settings = {
@@ -31,11 +31,11 @@
       ];
     };
     shadow = true;
-    shadowOffsets = [
-      "-25"
-      "-25"
-    ];
     shadowOpacity = 0.75;
+    shadowOffsets = [
+      (-25)
+      (-25)
+    ];
     vSync = true;
   };
 }
