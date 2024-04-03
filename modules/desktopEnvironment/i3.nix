@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 { config, lib, pkgs, ... }:
-
+with lib;
 let
   mod = "Mod4";
 in {
@@ -52,13 +52,13 @@ in {
 	  always = true;
 	  notification = false;
         }
-      ]
+      ];
 
 # }}}
 
 # Keybinds {{{
 
-      keybindings = lib.mkOptionDefault {
+      keybindings = lib.mkDefault {
         # Screenshot
 	"Print" = "exec --no-startup-id sh -c '${pkgs.flameshot}/bin/flameshot gui'";
         
@@ -202,3 +202,4 @@ in {
 # }}}
     };
   };
+}
