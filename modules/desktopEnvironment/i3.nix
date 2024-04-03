@@ -11,6 +11,10 @@ in {
     config = {
       modifier = mod;
 
+      bars = [
+	{ mode = "hide"; }
+      ];
+
       terminal = "kitty";
 
       fonts = {
@@ -83,7 +87,7 @@ in {
 
 	# Eww power menu
 	"${mod}+Shift+p" = "exec ${pkgs.eww}/bin/eww open powermenu";
-	# "{mod}+Ctrl+p" = "exec ${pkgs.eww}/bin/eww close powermenu";
+	"${mod}+Ctrl+p" = "exec ${pkgs.eww}/bin/eww close powermenu";
 
 	# Focus
 	"${mod}+h" = "focus left";
