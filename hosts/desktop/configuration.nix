@@ -140,6 +140,22 @@
   # Services {{{
   # List services that you want to enable:
 
+  # Xserver
+  services.xserver = {
+    enable = true;
+    desktopManager = {
+      xterm.enable = false;
+    };
+    displayManager = {
+      defaultSession = "none+i3-gaps";
+      session = {
+	manage = "desktop";
+	name = "i3gaps";
+	start = ''exec i3'';
+      };
+    };
+  };
+
   # CUPS
   services.printing.enable = true;
 
