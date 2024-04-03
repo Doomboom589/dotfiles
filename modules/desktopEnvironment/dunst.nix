@@ -41,7 +41,7 @@
 	format = "<b>%a</b>\n%s\n\n%b";
 	alignment = "left";
 	vertical_alignment = "center";
-	show_age_threshold = 60
+	show_age_threshold = 60;
     	ellipsize = "middle";
     	ignore_newline = "no";
     	stack_duplicates = "true";
