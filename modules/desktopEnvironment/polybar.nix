@@ -127,7 +127,7 @@ in
 	modules-left = "";
 	modules-center = "left xworkspaces-1 right";
 	modules-right = "";
-	wm-restock = i3;
+	wm-restock = "i3";
       };
 
       "settings" = {
