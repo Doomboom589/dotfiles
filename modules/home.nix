@@ -39,7 +39,6 @@
     #polybar
     #eww
     #dunst
-    gtk2
     gtk3
     #picom
     #rofi
