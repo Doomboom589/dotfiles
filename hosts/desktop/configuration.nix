@@ -143,17 +143,25 @@
   # Xserver
   services.xserver = {
     enable = true;
+    libinput.enable = true;
     desktopManager = {
       xterm.enable = false;
     };
     displayManager = {
+      session = [ 
+      {
+	manage = "desktop";
+	name = "i3";
+	start = ''exec i3'';
+      }
+      ];
       sddm = {
 	enable = true;
 	package = pkgs.plasma5Packages.sddm;
 	extraPackages = [
 	  pkgs.catppuccin-sddm-corners
 	];
-        theme = "catppuccin-sddm-corners";
+        theme = "catppuccin";
       };
     };
   };
