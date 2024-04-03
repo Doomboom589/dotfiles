@@ -1,6 +1,6 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 
 let 
 
@@ -54,12 +54,9 @@ in
 {
   services.polybar = {
     enable = true;
-    package = pkgs.polybar.override {
-      i3GapsSupport = true;
-    };
-
+    package = pkgs.polybar;
+    #package = pkgs.polybar.override { i3GapsSupport = true; };
     script = "polybar -q -r primary-top & polybar -q -r secondary-top &";
-
     config = {
       "global/wm" = {
 	margin-top = 0;
