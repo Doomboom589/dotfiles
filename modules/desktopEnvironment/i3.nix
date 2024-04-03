@@ -37,7 +37,7 @@ in {
 	}
       ]; 
 
-      workspaceAutoBackAndForth = "true";
+      workspaceAutoBackAndForth = true;
 
 # Startup {{{
 
