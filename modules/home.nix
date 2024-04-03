@@ -14,7 +14,6 @@
 # Imports {{{
 
   imports = [
-    ./deskenv/default.nix
   ];
 
 # }}}
@@ -26,15 +25,32 @@
     # Terminal
     git
     wget
-    fish
+    #fish
     tmux
     kitty
     btop
+    neofetch
+    spicetify-cli
+    brightnessctl
+    # Desktop environment
+    #i3-gaps
+    #polybar
+    #eww
+    #dunst
+    gtk2
+    gtk3
+    #picom
+    #rofi
+    # Fonts
+    fira-code-nerdfont
+    monaspace
     # Applications
     steam
     discord
     spotify
     librewolf
+    #flameshot
+    feh
   ];
 
   home.file = {
