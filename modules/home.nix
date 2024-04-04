@@ -28,7 +28,6 @@
     # Terminal
     git
     wget
-    #fish
     tmux
     kitty
     btop
@@ -36,13 +35,7 @@
     spicetify-cli
     brightnessctl
     # Desktop environment
-    #i3-gaps
-    #polybar
-    #eww
-    #dunst
     gtk3
-    #picom
-    #rofi
     # Fonts
     fira-code-nerdfont
     monaspace
@@ -53,8 +46,8 @@
     discord
     spotify
     librewolf
-    #flameshot
     feh
+    pango
   ];
 
   home.file = {
