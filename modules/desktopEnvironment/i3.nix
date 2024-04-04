@@ -4,6 +4,11 @@
 with lib;
 let
   mod = "Mod4";
+  bg-1 = "#12121f";
+  blue-2 = "#729ce9";
+  fg-1 = "#daddff";
+  red-2 = "#da587d";
+  grey-2 = "#595b7e";
 in {
   xsession.windowManager.i3 = {
     enable = true;
@@ -13,8 +18,45 @@ in {
 
       bars = [
 	{ 
-	  mode = "hide"; 
-	  command = "./.";
+	  mode = "dock"; 
+	  command = "${pkgs.i3blocks}/bin/i3blocks";
+	  position = "top";
+	  tray_output = "primary";
+	  tray_padding = 4;
+	  font = "FiraCode Nerd Font Mono 18";
+	  separator_symbol = "\" \"";
+	  strip_workspace_numbers = "yes";
+	  colors = {
+	    background = "${bg-1}";
+	    statusline = "${fg-1}";
+	    separator = "${bg-1}";
+	    
+	    activeWorkspace = {
+	      background = "${bg-1}";
+	      border = "${bg-1}";
+	      text = "${fg-1}";
+	    };
+	    inactiveWorkspace = {
+	      background = "${bg-1}";
+	      border = "${bg-1}";
+	      text = "${grey-2}";
+	    };
+	    urgentWorkspace = {
+	      background = "${bg-1}";
+	      border = "${bg-1}";
+	      text = "${red-2}";
+	    };
+	    focusedWorkspace = {
+	      background = "${bg-1}";
+	      border = "${bg-1}";
+	      text = "${blue-2}";
+	    };
+	    bindingMode = {
+	      background = "${bg-1}";
+	      border = "${bg-1}";
+	      text = "${red-2}";
+	    };
+	  };
 	}
       ];
 
@@ -91,11 +133,6 @@ in {
 # Startup {{{
 
       startup = [
-        {
-	  command = "systemctl --user restart polybar.service";
-	  always = true;
-	  notification = false;
-        }
         {
 	  command = "${pkgs.feh}/bin/feh --bg-fill --no-xinerama --randomize ~/nixos/modules/desktopEnvironment/wallpapers/*";
 	  always = true;
@@ -178,7 +215,7 @@ in {
 
 # }}}
 
-# Colours {{{
+# Colours {{{ 
 
       colors = { 
 	background = "#12121F";
