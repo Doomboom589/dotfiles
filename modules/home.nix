@@ -16,6 +16,7 @@
   imports = [
     ./desktopEnvironment/modules.nix
     ./programs/modules.nix
+    ./services/modules.nix
   ];
 
 # }}}
@@ -45,6 +46,8 @@
     # Fonts
     fira-code-nerdfont
     monaspace
+    # Icons
+    kora-icon-theme
     # Applications
     steam
     discord
