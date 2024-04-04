@@ -167,9 +167,8 @@ in {
 	# Rofi
 	"${mod}+d" = "exec ${pkgs.rofi}/bin/rofi -show drun";
 
-	# Eww power menu
-	"${mod}+Shift+p" = "exec ${pkgs.eww}/bin/eww open powermenu";
-	"${mod}+Ctrl+p" = "exec ${pkgs.eww}/bin/eww close powermenu";
+	# Rofi power menu
+	"${mod}+Shift+p" = "exec ${pkgs.rofi}/bin/rofi -show menu -modi 'menu:rofi-power-menu'";
 
 	# Focus
 	"${mod}+h" = "focus left";
