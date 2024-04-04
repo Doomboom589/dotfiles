@@ -64,7 +64,7 @@ in
       };
 
       "bar/primary-top" = {
-	monitor = "${env:MONITOR:DP0}";
+	monitor = "\${env:MONITOR:DP-0}";
 	monitor-exact = true;
 	overide-redirect = false;
 	enable-ipc = true;
@@ -89,14 +89,14 @@ in
 	font-3 = "FiraCode Nerd Font Mono:size=16";
 	scroll-up = "i3.next";
 	scroll-down = "i3.prev";
-	modules-left = "left filesystem slash space slash cpu slash space slash memory slash space slash temperature slash space slash xworkspaces-0 right";
+	modules-left = "left filesystem slash space slash cpu slash space slash memory slash space slash temperature slash space slash i3-0 right";
 	modules-center = "left xwindows right";
 	mpdules-right = "left pulseaudio slash space slash network slash space slash time slash space slash date right";
 	wm-restock = "i3";
       };
 
       "bar/secondary-top" = {
-	monitor = "${env:MONITOR:DP4}";
+	monitor = "\${env:MONITOR:DP-4}";
 	monitor-exact = true;
 	overide-redirect = true;
 	enable-ipc = true;
@@ -122,7 +122,7 @@ in
 	scroll-up = "i3.next";
 	scroll-down = "i3.prev";
 	modules-left = "";
-	modules-center = "left xworkspaces-1 right";
+	modules-center = "left i3-1 right";
 	modules-right = "";
 	wm-restock = "i3";
       };
@@ -211,52 +211,60 @@ in
 	label-disconnected-foreground = "${fg-1}";
       };
 
-      "module/xworkspaces-0" = {
-      	type = "internal/xworkspaces";
-	icon-0 = "1;I";
-	icon-1 = "2;II";
-	icon-2 = "3;III";
-	icon-3 = "4;IV";
-	icon-4 = "5;V";
-	label-active = "%icon%";
-	label-active-background = "${bg-1}";
-	label-active-foreground= "${blue-2}";
-	label-active-padding = 1;
-	label-occupied = "%icon%";
-	label-occupied-padding = 1;
-	label-occupied-background = "${bg-1}";
+      "module/i3-0" = {
+      	type = "internal/i3";
+	ws-icon-0 = "1;I";
+	ws-icon-1 = "2;II";
+	ws-icon-2 = "3;III";
+	ws-icon-3 = "4;IV";
+	ws-icon-4 = "5;V";
+	pin-workspaces = true;
+	label-mode = "%mode%";
+	label-mode-background = "${bg-1}";
+	label-mode-padding = 1;
+	label-focused = "%icon%";
+	label-focused-background = "${bg-1}";
+	label-focused-foreground= "${blue-2}";
+	label-focused-padding = 1;
+	label-unfocused = "%icon%";
+	label-unfocused-padding = 1;
+	label-unfocused-background = "${bg-1}";
 	label-urgent = "%icon%";
 	label-urgent-background = "${bg-1}";
 	label-urgent-foreground = "${red-1}";
 	label-urgent-padding = 1;
-	label-empty = "%icon%";
-	label-empty-background = "${bg-1}";
-	label-empty-foreground = "${fg-1}";
-	label-empty-padding = 1;
+	label-visible = "%icon%";
+	label-visible-background = "${bg-1}";
+	label-visible-foreground = "${fg-1}";
+	label-visible-padding = 1;
       };
 
-      "module/xworkspaces-1" = {
-      	type = "internal/xworkspaces";
-	icon-0 = "6;VI";
-	icon-1 = "7;VII";
-	icon-2 = "8;VIII";
-	icon-3 = "9;IX";
-	icon-4 = "0;X";
-	label-active = "%icon%";
-	label-active-background = "${bg-1}";
-	label-active-foreground= "${blue-2}";
-	label-active-padding = 1;
-	label-occupied = "%icon%";
-	label-occupied-padding = 1;
-	label-occupied-background = "${bg-1}";
+      "module/i3-1" = {
+      	type = "internal/i3";
+	ws-icon-5 = "6;VI";
+	ws-icon-6 = "7;VII";
+	ws-icon-7 = "8;VIII";
+	ws-icon-8 = "9;IX";
+	ws-icon-9 = "0;X";
+	pin-workspaces = true;
+	label-mode = "%mode%";
+	label-mode-background = "${bg-1}";
+	label-mode-padding = 1;
+	label-focused = "%icon%";
+	label-focused-background = "${bg-1}";
+	label-focused-foreground= "${blue-2}";
+	label-focused-padding = 1;
+	label-unfocused = "%icon%";
+	label-unfocused-padding = 1;
+	label-unfocused-background = "${bg-1}";
 	label-urgent = "%icon%";
 	label-urgent-background = "${bg-1}";
 	label-urgent-foreground = "${red-1}";
 	label-urgent-padding = 1;
-	label-empty = "%icon%";
-	label-empty-background = "${bg-1}";
-	label-empty-foreground = "${fg-1}";
-	label-empty-padding = 1;
+	label-visible = "%icon%";
+	label-visible-background = "${bg-1}";
+	label-visible-foreground = "${fg-1}";
+	label-visible-padding = 1;
       };
 
       "module/xwindows" = {
