@@ -42,7 +42,7 @@ in
     bars = {
       top = {
 	disk = {
-	  command = "echo \"<span foreground='${purple-2}' background='${bg-1}' size='x-large'> </span><span background='${bg-1}'> <span foreground='${purle-2}' size='large'></span> <span foreground='${fg-1}' size='small' rise='2pt'>/</span> <span size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}')</span>  </span><span background='${purple-2}' foreground='${blue-2}' size='x-large'></span>\"";
+	  command = "echo \"<span foreground='${purple-2}' background='${bg-1}' size='x-large'> </span><span background='${bg-1}'> <span foreground='${purple-2}' size='large'></span> <span foreground='${fg-1}' size='small' rise='2pt'>/</span> <span size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}')</span>  </span><span background='${purple-2}' foreground='${blue-2}' size='x-large'></span>\"";
 	  markup = "pango";
 	  background = "${bg-1}";
 	  color = "${fg-1}";
@@ -59,8 +59,8 @@ in
 	  interval = 1;
 	};
 	  time = {
-	  command=echo "<span foreground='${yellow-2}' background='${green-2}' size='x-large'></span><span background='${yellow-2}'> <span foreground='${fg-1}' size='large'></span> <span size='small' rise='2pt'>$(date +\"%H:%M:%S\")</span> </span><span background='${yellow-2}' foreground='{$red-2}' size='x-large'></span>";
-	  markup = pango;
+	  command="echo \"<span foreground='${yellow-2}' background='${green-2}' size='x-large'></span><span background='${yellow-2}'> <span foreground='${fg-1}' size='large'></span> <span size='small' rise='2pt'>$(date +\"%H:%M:%S\")</span> </span><span background='${yellow-2}' foreground='{$red-2}' size='x-large'></span>\"";
+	  markup = "pango";
 	  interval = 1;
 	};
 	rofi-powermenu = {
