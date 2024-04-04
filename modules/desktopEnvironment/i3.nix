@@ -21,9 +21,6 @@ in {
 	  mode = "dock"; 
 	  command = "${pkgs.i3blocks}/bin/i3blocks";
 	  position = "top";
-	  tray_output = "primary";
-	  tray_padding = 4;
-	  strip_workspace_numbers = "yes";
 	  colors = {
 	    background = "${bg-1}";
 	    statusline = "${fg-1}";
