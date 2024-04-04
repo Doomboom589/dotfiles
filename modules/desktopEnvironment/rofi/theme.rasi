@@ -23,6 +23,8 @@
 	margin: 0;
 	padding: 0;
 	spacing: 0;
+
+	font: "Monaspace Krypton 18";
 }
 
 element-icon, element-text, scrollbar {
@@ -31,10 +33,10 @@ element-icon, element-text, scrollbar {
 
 window {
 	location: center;
-	width: 290px;
-	height: 445px;
-	x-offset: 4px;
-	y-offset: 26px;
+	width: 20%;
+	height: 40%;
+	x-offset: 0px;
+	y-offset: 0px;
 
 	background-color: @bg1;
 	border: 2px;
@@ -104,4 +106,9 @@ element-icon {
 
 element-text {
 	text-color: inherit;
+}
+configuration {
+	show-icons: true;
+	font: "Monaspace Krypton 18";
+	icon-theme: "kora";
 }
