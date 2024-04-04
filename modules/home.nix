@@ -48,6 +48,7 @@
     librewolf
     feh
     pango
+    rofi-power-menu
   ];
 
   home.file = {
