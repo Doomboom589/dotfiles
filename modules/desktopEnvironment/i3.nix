@@ -45,6 +45,49 @@ in {
 
       workspaceAutoBackAndForth = true;
 
+      workspaceOutputAssign = [
+	{
+	  workspace = "1: I";
+	  output = "DP-4";
+	}
+	{
+	  workspace = "2: II";
+	  output = "DP-4";
+	}
+	{
+	  workspace = "3: III";
+	  output = "DP-4";
+	}
+	{
+	  workspace = "4: IV";
+	  output = "DP-4";
+	}
+	{
+	  workspace = "5: V";
+	  output = "DP-4";
+	}
+	{
+	  workspace = "6: VI";
+	  output = "DP-0";
+	}
+	{
+	  workspace = "7: VII";
+	  output = "DP-0";
+	}
+	{
+	  workspace = "8: VIII";
+	  output = "DP-0";
+	}
+	{
+	  workspace = "9: IX";
+	  output = "DP-0";
+	}
+	{
+	  workspace = "0: X";
+	  output = "DP-0";
+	}
+      ];
+
 # Startup {{{
 
       startup = [
