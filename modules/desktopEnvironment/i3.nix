@@ -63,7 +63,7 @@ in {
       terminal = "kitty";
 
       fonts = {
-        names = [ "FiraCode Nerd Font Mono" ];
+        names = [ "Monaspace Krypton" ];
 	size = 9.0;
       };
 
