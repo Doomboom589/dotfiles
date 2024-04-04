@@ -89,43 +89,43 @@ in {
 
       workspaceOutputAssign = [
 	{
-	  workspace = "1: I";
+	  workspace = "I";
 	  output = "DP-4";
 	}
 	{
-	  workspace = "2: II";
+	  workspace = "II";
 	  output = "DP-4";
 	}
 	{
-	  workspace = "3: III";
+	  workspace = "III";
 	  output = "DP-4";
 	}
 	{
-	  workspace = "4: IV";
+	  workspace = "IV";
 	  output = "DP-4";
 	}
 	{
-	  workspace = "5: V";
+	  workspace = "V";
 	  output = "DP-4";
 	}
 	{
-	  workspace = "6: VI";
+	  workspace = "VI";
 	  output = "DP-0";
 	}
 	{
-	  workspace = "7: VII";
+	  workspace = "VII";
 	  output = "DP-0";
 	}
 	{
-	  workspace = "8: VIII";
+	  workspace = "VIII";
 	  output = "DP-0";
 	}
 	{
-	  workspace = "9: IX";
+	  workspace = "IX";
 	  output = "DP-0";
 	}
 	{
-	  workspace = "0: X";
+	  workspace = "X";
 	  output = "DP-0";
 	}
       ];
