@@ -6,7 +6,7 @@
     iconTheme = {
       name = "kora";
       package = pkgs.kora-icon-theme;
-      size = "32x32";
+      size = "16x16";
     };
     settings = {
       global = {
@@ -38,7 +38,7 @@
     	font = "FiraCode Nerd Font Mono 11";
 	line_height = 0;
 	markup = "full";
-	format = "<b>%a</b>\n%s\n\n%b";
+	format = "<b>%a</b>\\n%s\\n\\n%b";
 	alignment = "left";
 	vertical_alignment = "center";
 	show_age_threshold = 60;
@@ -58,6 +58,9 @@
 	mouse_left_click = "close_current";
 	mouse_middle_click = "do_action, close_current";
 	mouse_right_click = "close_all";
+	icon_theme = "kora";
+	min_icon_size = 30;
+	max_icon_size = 128;
       };
 
       urgency_low = {
