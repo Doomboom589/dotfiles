@@ -23,7 +23,6 @@ in {
 	  position = "top";
 	  tray_output = "primary";
 	  tray_padding = 4;
-	  separator_symbol = "\" \"";
 	  strip_workspace_numbers = "yes";
 	  colors = {
 	    background = "${bg-1}";
