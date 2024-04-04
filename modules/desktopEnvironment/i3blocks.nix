@@ -42,31 +42,34 @@ in
     bars = {
       top = {
 	"1-disk" = {
-	  command = "echo \"<span foreground='${purple-2}' background='${bg-1}' size='x-large'> </span><span background='${bg-1}'><span background='${purple-2}' foreground='${grey-2}' size='large'></span><span background='${purple-2}' foreground='${fg-1}' size='small' rise='2pt'> / </span><span background='${purple-2}' size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}')</span></span><span background='${purple-2}' foreground='${blue-2}' size='x-large'> </span>\"";
+	  command = "echo \"<span foreground='${blue-2}' background='${bg-1}' size='x-large'> </span><span background='${bg-1}'><span background='${blue-2}' foreground='${grey-1}' size='large'> </span><span background='${blue-2}' foreground='${fg-1}' size='small' rise='2pt'> / </span><span background='${blue-2}' size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}') </span></span>\"";
 	  markup = "pango";
-	  background = "${bg-1}";
-	  color = "${fg-1}";
 	  interval = 30;
+	  separator_block_width = 0;
         };
         "2-volume-pulseaudio" = {
-	  command = "wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep 0 > /dev/null && echo \"<span background='${blue-2}' foreground='${fg-1}' size='large'> </span><span background='${blue-2}' size='small' rise='2pt'> $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}' | sed 's/0\\.//g')%</span>\" || echo \"<span foreground='${red-2}' size='large'> ﱝ</span>\"";
+	  command = "wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep 0 > /dev/null && echo \"<span background='${blue-2}' foreground='${blue-3}' size='x-large'></span><span background='${blue-3}' foreground='${fg-1}' size='large'>  </span><span background='${blue-3}' size='small' rise='2pt'> $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}' | sed 's/0\\.//g')%</span>\" || echo \"<span foreground='${red-2}' size='large'>  ﱝ</span>\"";
 	  markup = "pango";
 	  interval = 1;
+	  separator_block_width = 0;
         };
 	"3-date" = {
-	  command = "echo \"<span foreground='${green-2}' background='${blue-2}' size='x-large'> </span><span background='${green-2}' foreground='${fg-1}' size='large'> </span> <span background='${green-2}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%Y-%m-%d\") </span>\"";
+	  command = "echo \"<span foreground='${purple-2}' background='${blue-3}' size='x-large'> </span><span background='${purple-2}' foreground='${fg-1}' size='large'>  </span><span background='${purple-2}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%Y-%m-%d\")</span>\"";
 	  markup = "pango";
 	  interval = 1;
+	  separator_block_width = 0;
 	};
 	"4-time" = {
-	  command="echo \"<span foreground='${bg-4}' background='${green-2}' size='x-large'> </span><span background='${bg-4}'> <span foreground='${fg-1}' size='large'> </span> <span background='${bg-4}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%H:%M:%S\") </span> </span>\"";
+	  command="echo \"<span foreground='${purple-3}' background='${purple-2}' size='x-large'> </span><span background='${purple-3}'> <span foreground='${fg-1}' size='large'> </span> <span background='${purple-3}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%H:%M:%S\")</span> </span>\"";
 	  markup = "pango";
 	  interval = 1;
+	  separator_block_width = 0;
 	};
 	"5-rofi-powermenu" = {
-	  command = "echo \"<span background='${bg-4}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large'></span> \"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu' >/dev/null; fi";
+	  command = "echo \"<span background='${purple-3}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large'>   </span>\"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu' >/dev/null; fi";
 	  markup = "pango";
 	  interval = 1;
+	  separator_block_width = 0;
 	};
       };
     }; 
