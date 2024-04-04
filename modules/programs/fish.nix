@@ -6,7 +6,7 @@
     functions = { };
     plugins = [ ];
     shellAbbrs = {
-      ls = "ls -l";
+      ls = "ls -a";
     };
   };
 }
