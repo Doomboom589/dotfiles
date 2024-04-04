@@ -1,39 +1,14 @@
 { pkgs, ... }:
 let
   bg-1 = "#12121f";
-  bg-2 = "#171728";
-  bg-3 = "#1d1d2f";
   bg-4 = "#222236";
-  bg-5 = "#29293f";
   fg-1 = "#daddff";
-  fg-2 = "#d7daff";
-  fg-3 = "#d4d7ff";
-  fg-4 = "#d0d3ff";
-  fg-5 = "#cccfff";
   grey-1 = "#4f5071";
-  grey-2 = "#595b7e";
-  grey-3 = "#63658b";
-  red-1 = "#de688a";
   red-2 = "#da587d";
-  red-3 = "#d74770";
-  purple-1 = "#9792dd";
   purple-2 = "#8983d8";
   purple-3 = "#7a73d3";
-  blue-1 = "#83a8ec";
   blue-2 = "#729ce9";
   blue-3 = "#608fe6";
-  cyan-1 = "#89e6e4";
-  cyan-2 = "#78e2e1";
-  cyan-3 = "#65dedc";
-  green-1 = "#8fe0b4";
-  green-2 = "#7fdca9";
-  green-3 = "#6fd89e";
-  yellow-1 = "#fdf5b0";
-  yellow-2 = "#fcf39c";
-  yellow-3 = "#fbf088";
-  orange-1 = "#e7c188";
-  orange-2 = "#e3b878";
-  orange-3 = "#e0af67";
 in
 {
   programs.i3blocks = {
@@ -54,7 +29,7 @@ in
 	  separator_block_width = 0;
         };
 	"3-date" = {
-	  command = "echo \"<span foreground='${purple-2}' background='${blue-3}' size='x-large'> </span><span background='${purple-2}' foreground='${fg-1}' size='large'>  </span><span background='${purple-2}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%Y-%m-%d\")</span>\"";
+	  command = "echo \"<span foreground='${purple-2}' background='${blue-3}' size='x-large'> </span><span background='${purple-2}' foreground='${fg-1}' size='large'>   </span><span background='${purple-2}' foreground='${fg-1}' size='small' rise='2pt'>$(date +\"%Y-%m-%d\")</span>\"";
 	  markup = "pango";
 	  interval = 1;
 	  separator_block_width = 0;
@@ -66,7 +41,7 @@ in
 	  separator_block_width = 0;
 	};
 	"5-rofi-powermenu" = {
-	  command = "echo \"<span background='${purple-3}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large'>   </span>\"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu' >/dev/null; fi";
+	  command = "echo \"<span background='${purple-3}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large'>   </span>\"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu' >/dev/null; fi";
 	  markup = "pango";
 	  interval = 1;
 	  separator_block_width = 0;
