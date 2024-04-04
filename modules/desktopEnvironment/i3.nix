@@ -12,14 +12,16 @@ in {
       modifier = mod;
 
       bars = [
-	{ mode = "hide"; }
+	{ 
+	  mode = "hide"; 
+	  command = "./.";
+	}
       ];
 
       terminal = "kitty";
 
       fonts = {
-        names = [ "Monaspace Krypton" ];
-	style = "Med";
+        names = [ "FiraCode Nerd Font Mono" ];
 	size = 9.0;
       };
 
@@ -52,7 +54,7 @@ in {
 	  notification = false;
         }
         {
-	  command = "find ~/nixos/modules/desktopEnvironment/wallpapers -type f ( -name '.jpg' -o -name '.png' ) -print0 | shuf -n1 -z | xargs -0 ${pkgs.feh}/bin/feh --bg-fill --no-xinerama";
+	  command = "${pkgs.feh}/bin/feh --bg-fill --no-xinerama --randomize ~/nixos/modules/desktopEnvironment/wallpapers/*";
 	  always = true;
 	  notification = false;
         }
@@ -62,7 +64,7 @@ in {
 
 # Keybinds {{{
 
-      keybindings = lib.mkDefault {
+      keybindings = lib.mkOptionDefault {
         # Screenshot
 	"Print" = "exec --no-startup-id sh -c '${pkgs.flameshot}/bin/flameshot gui'";
         
@@ -73,8 +75,8 @@ in {
 	"XF86AudioMicMute" = "exec --no-startup-id wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
 
 	# Brightness
-	"XF86MonBrightnessDown" = "exec brightnessctl set 4%-";
-        "XF86MonBrightnessUp" = "exec brightnessctl set 4%+";
+	"XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 4%-";
+        "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 4%+";
 
 	# Spawn terminal
 	"${mod}+Return" = "exec kitty";
@@ -107,33 +109,7 @@ in {
 	"${mod}+Ctrl+v" = "split v";
 
 	# Layout
-	"${mod}}+w" = "layout tabbed";
-	"${mod}}+s" = "layout toggle split";
 	"${mod}+Shift+space" = "floating toggle";
-
-	# Workspaces
-	"${mod}+1" = "workspace number $ws1";
-	"${mod}+2" = "workspace number $ws2";
-	"${mod}+3" = "workspace number $ws3";
-	"${mod}+4" = "workspace number $ws4";
-	"${mod}+5" = "workspace number $ws5";
-	"${mod}+6" = "workspace number $ws6";
-	"${mod}+7" = "workspace number $ws7";
-	"${mod}+8" = "workspace number $ws8";
-	"${mod}+9" = "workspace number $ws9";
-	"${mod}+0" = "workspace number $ws0";
-
-	# Move to workspace
-	"${mod}+Shift+1" = "move container to workspace number $ws1";
-	"${mod}+Shift+2" = "move container to workspace number $ws2";
-	"${mod}+Shift+3" = "move container to workspace number $ws3";
-	"${mod}+Shift+4" = "move container to workspace number $ws4";
-	"${mod}+Shift+5" = "move container to workspace number $ws5";
-	"${mod}+Shift+6" = "move container to workspace number $ws6";
-	"${mod}+Shift+7" = "move container to workspace number $ws7";
-	"${mod}+Shift+8" = "move container to workspace number $ws8";
-	"${mod}+Shift+9" = "move container to workspace number $ws9";
-	"${mod}+Shift+0" = "move container to workspace number $ws0";
 
 	# Modes
 	"${mod}+r" = "mode \"resize\"";
