@@ -23,7 +23,6 @@ in {
 	  position = "top";
 	  tray_output = "primary";
 	  tray_padding = 4;
-	  font = "FiraCode Nerd Font Mono 18";
 	  separator_symbol = "\" \"";
 	  strip_workspace_numbers = "yes";
 	  colors = {
