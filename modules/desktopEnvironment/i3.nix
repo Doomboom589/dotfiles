@@ -19,8 +19,13 @@ in {
       bars = [
 	{ 
 	  mode = "dock"; 
-	  command = "${pkgs.i3blocks}/bin/i3blocks";
+	  statusCommand = "${pkgs.i3blocks}/bin/i3blocks -c ~/.config/i3blocks/top";
 	  position = "top";
+	  fonts = {
+	    names = [ "Monaspace Krypton" ];
+	    style = "Medium";
+  	    size = 13.0;
+	  };
 	  colors = {
 	    background = "${bg-1}";
 	    statusline = "${fg-1}";
