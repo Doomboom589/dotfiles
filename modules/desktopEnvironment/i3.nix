@@ -134,7 +134,7 @@ in {
 
       startup = [
         {
-	  command = "${pkgs.feh}/bin/feh --bg-fill --no-xinerama --randomize ~/nixos/modules/desktopEnvironment/wallpapers/*";
+	  command = "shuf -e -n1 $HOME/.config/wallpapers/* | xargs ${pkgs.feh}/bin/feh --bg-scale";
 	  always = true;
 	  notification = false;
         }
