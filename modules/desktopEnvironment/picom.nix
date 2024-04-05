@@ -5,13 +5,7 @@
     package = pkgs.picom;
     activeOpacity = 1.0;
     backend = "glx";
-    fade = true;
-    fadeDelta = 10;
-    fadeExclude = [ ];
-    fadeSteps = [
-      0.07
-      0.07
-    ];
+    fade = false;
     inactiveOpacity = 1.0;
     menuOpacity = 0.8;
     opacityRules = [
@@ -21,20 +15,20 @@
       blur = {
 	method = "dual_kawase";
 	size = 50;
-	strength = 1;
+	strength = 5;
 	background = true;
       };
       frame-opacity = 1.0;
       corner-radius = 8;
       rounded-corners-exclude = [
-	"window_type = 'desktop'"
+	"window_type = 'dock'"
       ];
     };
     shadow = true;
     shadowOpacity = 0.75;
     shadowOffsets = [
-      (-25)
-      (-25)
+      (-15)
+      (-10)
     ];
     vSync = true;
   };
