@@ -49,6 +49,7 @@
     feh
     pango
     rofi-power-menu
+    krita
   ];
 
   home.file = {
