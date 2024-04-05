@@ -26,6 +26,8 @@ in {
 	    style = "Medium";
   	    size = 13.0;
 	  };
+	  trayOutput = "DP-0";
+	  trayPadding = 1;
 	  colors = {
 	    background = "${bg-1}";
 	    statusline = "${fg-1}";
@@ -84,8 +86,6 @@ in {
 	  criteria.class = ".*";
 	}
       ]; 
-
-      workspaceAutoBackAndForth = true;
 
       workspaceOutputAssign = [
 	{
