@@ -41,7 +41,7 @@ in
 	  separator_block_width = 0;
 	};
 	"5-rofi-powermenu" = {
-	  command = "echo \"<span background='${purple-3}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large' rise='2pt'>   </span>\"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu'>/dev/null; fi";
+	  command = "echo \"<span background='${purple-3}' foreground='${red-2}' size='x-large'> </span><span background='${red-2}' foreground='${fg-1}' size='large' rise='2pt'>   </span><span background='${bg-1}' foreground='${red-2}' size='x-large'></span>\"; if [ $button ]; then rofi -show menu -modi 'menu:rofi-power-menu'>/dev/null; fi";
 	  markup = "pango";
 	  interval = 1;
 	  separator_block_width = 0;
