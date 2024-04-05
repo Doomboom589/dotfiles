@@ -5,5 +5,6 @@
     ./i3blocks.nix
     ./picom.nix
     ./rofi.nix
+    ./wallpapers.nix
   ];
 }
