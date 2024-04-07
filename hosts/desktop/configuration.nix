@@ -119,6 +119,7 @@
   # $ nix search wget
   
   environment.systemPackages = with pkgs; [
+    inputs.sddm-catppuccin.packages.${pkgs.hostPlatform.system}.sddm-catppuccin
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
@@ -159,7 +160,7 @@
 	enable = true;
 	package = pkgs.plasma5Packages.sddm;
 	extraPackages = [
-	  pkgs.catppuccin-sddm-corners
+	  pkgs.libsForQt5.qt5.qtgraphicaleffects
 	];
         theme = "catppuccin";
       };
