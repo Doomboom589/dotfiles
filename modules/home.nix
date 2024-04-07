@@ -29,12 +29,14 @@
     git
     wget
     tmux
-    kitty
     btop
     neofetch
+    kitty
     spicetify-cli
     brightnessctl
     gh
+    onefetch
+    cava
     # Desktop environment
     gtk3
     # Fonts
