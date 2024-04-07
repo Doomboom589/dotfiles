@@ -38,6 +38,7 @@ in {
 	  mode = "dock"; 
 	  statusCommand = "${pkgs.i3blocks}/bin/i3blocks -c ~/.config/i3blocks/top";
 	  position = "top";
+	  extraConfig = "strip_workspace_numbers yes";
 	  fonts = {
 	    # Automatically uses pango without need to mention it because pango is installed
 	    names = [ "Monaspace Krypton" ];
