@@ -17,9 +17,8 @@
 
     # Sddm catppuccin corners theme
     sddm-catppuccin = {
-      url = "github:khaneliman/sddm-catppuccin";
+      url = "github:khaneliman/catppuccin-sddm-corners";
       inputs.nixpkgs.follows = "nixpkgs";
-      packages.${pkgs.hostPlatform.system}.sddm-catppuccin
     };
   };
 
@@ -34,7 +33,6 @@
       modules = [
         ./hosts/desktop/configuration.nix 
         inputs.home-manager.nixosModules.default
-        inputs.sddm-catppuccin.packages.${pkgs.hostPlatform.system}.sddm-catppuccin
       ];
     };
   };
