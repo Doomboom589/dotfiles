@@ -37,6 +37,9 @@
     gh
     onefetch
     cava
+    cowsay
+    pipes
+    lolcat
     # Desktop environment
     gtk3
     # Fonts
