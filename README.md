@@ -1,3 +1,5 @@
+# This branch is no longer maintained
+
 # Hyprland Catppuccin Dotfiles
 **Warning: My dotfiles might not, and should not be expected to, work out of the box. It is not my responsibility to fix it for you**
 
