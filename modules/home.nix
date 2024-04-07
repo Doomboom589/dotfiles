@@ -34,6 +34,7 @@
     neofetch
     spicetify-cli
     brightnessctl
+    gh
     # Desktop environment
     gtk3
     # Fonts
