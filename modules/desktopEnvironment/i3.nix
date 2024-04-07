@@ -9,12 +9,29 @@ let
   fg-1 = "#daddff";
   red-2 = "#da587d";
   grey-2 = "#595b7e";
+  workspace = { "a" = "󰎤 "; "b" = "󰎧 "; "c" = "󰎪 "; "d" = "󰎭 "; "e" = "󰎱 "; "f" = "󰎳 "; "g" = "󰎶 "; "h" = "󰎹 "; "i" = "󰎼 "; "j" = "󰎡 "; };
 in {
   xsession.windowManager.i3 = {
     enable = true;
     package = pkgs.i3-gaps;
+    # assigns workspaces in extraConfig
+    extraConfig =
+    ''
+      workspace ${workspace.a} output DP-0 HDMI-1
+      workspace ${workspace.b} output DP-0 HDMI-1
+      workspace ${workspace.c} output DP-0 HDMI-1
+      workspace ${workspace.d} output DP-0 HDMI-1
+      workspace ${workspace.e} output DP-0 HDMI-1
+      workspace ${workspace.f} output DP-4 DP-2
+      workspace ${workspace.g} output DP-4 DP-2
+      workspace ${workspace.h} output DP-4 DP-2
+      workspace ${workspace.i} output DP-4 DP-2
+      workspace ${workspace.j} output DP-4 DP-2
+    '';
     config = {
       modifier = mod;
+
+# Bar {{{
 
       bars = [
 	{ 
@@ -22,6 +39,7 @@ in {
 	  statusCommand = "${pkgs.i3blocks}/bin/i3blocks -c ~/.config/i3blocks/top";
 	  position = "top";
 	  fonts = {
+	    # Automatically uses pango without need to mention it because pango is installed
 	    names = [ "Monaspace Krypton" ];
 	    style = "Medium";
   	    size = 13.0;
@@ -62,9 +80,12 @@ in {
 	}
       ];
 
+# }}}
+
       terminal = "kitty";
 
       fonts = {
+	# Automatically uses pango without need to mention it because pango is installed
         names = [ "Monaspace Krypton" ];
 	size = 9.0;
       };
@@ -80,55 +101,15 @@ in {
 	smartBorders = "on";
       };
 
-      window.commands = [
-	{
-	  command = "border pixel 0";
-	  criteria.class = ".*";
-	}
-      ]; 
-
-      workspaceOutputAssign = [
-	{
-	  workspace = "I";
-	  output = "DP-4";
-	}
-	{
-	  workspace = "II";
-	  output = "DP-4";
-	}
-	{
-	  workspace = "III";
-	  output = "DP-4";
-	}
-	{
-	  workspace = "IV";
-	  output = "DP-4";
-	}
-	{
-	  workspace = "V";
-	  output = "DP-4";
-	}
-	{
-	  workspace = "VI";
-	  output = "DP-0";
-	}
-	{
-	  workspace = "VII";
-	  output = "DP-0";
-	}
-	{
-	  workspace = "VIII";
-	  output = "DP-0";
-	}
-	{
-	  workspace = "IX";
-	  output = "DP-0";
-	}
-	{
-	  workspace = "X";
-	  output = "DP-0";
-	}
-      ];
+      window = {
+        commands = [
+	  {
+	    command = "border pixel 0";
+	    criteria.class = ".*";
+	  }
+        ]; 
+        border = 4;
+      };
 
 # Startup {{{
 
@@ -142,9 +123,88 @@ in {
 
 # }}}
 
-# Keybinds {{{
+# Keybinds {{{ 
 
-      keybindings = lib.mkOptionDefault {
+      keycodebindings = {
+      # Workspaces
+	# Switch to workspace
+	"${mod}+10" = "workspace ${workspace.a}";
+	"${mod}+11" = "workspace ${workspace.b}";
+	"${mod}+12" = "workspace ${workspace.c}";
+	"${mod}+13" = "workspace ${workspace.d}";
+	"${mod}+14" = "workspace ${workspace.e}";
+	"${mod}+15" = "workspace ${workspace.f}";
+	"${mod}+16" = "workspace ${workspace.g}";
+	"${mod}+17" = "workspace ${workspace.h}";
+	"${mod}+18" = "workspace ${workspace.i}";
+	"${mod}+19" = "workspace ${workspace.j}";
+
+	# Switch to workspace with numpad
+	"${mod}+87" = "workspace ${workspace.a}";
+	"${mod}+88" = "workspace ${workspace.b}";
+	"${mod}+89" = "workspace ${workspace.c}";
+	"${mod}+83" = "workspace ${workspace.d}";
+	"${mod}+84" = "workspace ${workspace.e}";
+	"${mod}+85" = "workspace ${workspace.f}";
+	"${mod}+79" = "workspace ${workspace.g}";
+	"${mod}+80" = "workspace ${workspace.h}";
+	"${mod}+81" = "workspace ${workspace.i}";
+	"${mod}+90" = "workspace ${workspace.j}";
+
+	# Switch to workspace with numlock numpad
+	"${mod}+Mod2+87" = "workspace ${workspace.a}";
+	"${mod}+Mod2+88" = "workspace ${workspace.b}";
+	"${mod}+Mod2+89" = "workspace ${workspace.c}";
+	"${mod}+Mod2+83" = "workspace ${workspace.d}";
+	"${mod}+Mod2+84" = "workspace ${workspace.e}";
+	"${mod}+Mod2+85" = "workspace ${workspace.f}";
+	"${mod}+Mod2+79" = "workspace ${workspace.g}";
+	"${mod}+Mod2+80" = "workspace ${workspace.h}";
+	"${mod}+Mod2+81" = "workspace ${workspace.i}";
+	"${mod}+Mod2+90" = "workspace ${workspace.j}";
+
+	# Move window to workspace
+	"${mod}+Shift+10" = "move container to workspace ${workspace.a}";
+	"${mod}+Shift+11" = "move container to workspace ${workspace.b}";
+	"${mod}+Shift+12" = "move container to workspace ${workspace.c}";
+	"${mod}+Shift+13" = "move container to workspace ${workspace.d}";
+	"${mod}+Shift+14" = "move container to workspace ${workspace.e}";
+	"${mod}+Shift+15" = "move container to workspace ${workspace.f}";
+	"${mod}+Shift+16" = "move container to workspace ${workspace.g}";
+	"${mod}+Shift+17" = "move container to workspace ${workspace.h}";
+	"${mod}+Shift+18" = "move container to workspace ${workspace.i}";
+	"${mod}+Shift+19" = "move container to workspace ${workspace.j}";
+
+	# Move window to workspace with numpad
+	"${mod}+Shift+87" = "move container to workspace ${workspace.a}";
+	"${mod}+Shift+88" = "move container to workspace ${workspace.b}";
+	"${mod}+Shift+89" = "move container to workspace ${workspace.c}";
+	"${mod}+Shift+83" = "move container to workspace ${workspace.d}";
+	"${mod}+Shift+84" = "move container to workspace ${workspace.e}";
+	"${mod}+Shift+85" = "move container to workspace ${workspace.f}";
+	"${mod}+Shift+79" = "move container to workspace ${workspace.g}";
+	"${mod}+Shift+80" = "move container to workspace ${workspace.h}";
+	"${mod}+Shift+81" = "move container to workspace ${workspace.i}";
+	"${mod}+Shift+90" = "move container to workspace ${workspace.j}";
+
+	# Move window to workspace with numlock numpad
+	"${mod}+Mod2+Shift+87" = "move container to workspace ${workspace.a}";
+	"${mod}+Mod2+Shift+88" = "move container to workspace ${workspace.b}";
+	"${mod}+Mod2+Shift+89" = "move container to workspace ${workspace.c}";
+	"${mod}+Mod2+Shift+83" = "move container to workspace ${workspace.d}";
+	"${mod}+Mod2+Shift+84" = "move container to workspace ${workspace.e}";
+	"${mod}+Mod2+Shift+85" = "move container to workspace ${workspace.f}";
+	"${mod}+Mod2+Shift+79" = "move container to workspace ${workspace.g}";
+	"${mod}+Mod2+Shift+80" = "move container to workspace ${workspace.h}";
+	"${mod}+Mod2+Shift+81" = "move container to workspace ${workspace.i}";
+	"${mod}+Mod2+Shift+90" = "move container to workspace ${workspace.j}";
+      };
+
+      keybindings = {
+	# Workspaces
+	"${mod}+Tab" = "workspace next";
+	"${mod}+Shift+Tab" = "workspace prev";
+	
         # Screenshot
 	"Print" = "exec --no-startup-id sh -c '${pkgs.flameshot}/bin/flameshot gui'";
         
@@ -168,7 +228,7 @@ in {
 	"${mod}+d" = "exec ${pkgs.rofi}/bin/rofi -show drun";
 
 	# Rofi power menu
-	"${mod}+Shift+p" = "exec ${pkgs.rofi}/bin/rofi -show menu -modi 'menu:rofi-power-menu'";
+	"${mod}+Shift+p" = "exec ${pkgs.rofi}/bin/rofi -show power-menu -modi \"power-menu:$HOME/.local/bin/rofi-power-menu --choices=logout/shutdown/reboot\"";
 
 	# Focus
 	"${mod}+h" = "focus left";
@@ -189,27 +249,10 @@ in {
 
 	# Layout
 	"${mod}+Shift+space" = "floating toggle";
-
-	# Modes
-	"${mod}+r" = "mode \"resize\"";
+	"${mod}+f" = "fullscreen toggle";
 
 	# Restart i3
 	"${mod}+Shift+r" = "restart";
-      };
-
-# }}}
-
-# Modes {{{
-
-      modes = {
-	resize = {
-	  Down = "resize grow height 10 px or 10 ppt";
-	  Escape = "mode default";
-	  Left = "resize shrink width 10 px or 10 ppt";
-	  Return = "mode default";
-	  Right = "resize grow width 10 px or 10 ppt";
-	  Up = "resize shrink height 10 px or 10 ppt";
-	};
       };
 
 # }}}
