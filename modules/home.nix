@@ -57,6 +57,7 @@
     pango
     rofi-power-menu
     krita
+    pavucontrol
   ];
 
   home.file = {
