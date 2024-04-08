@@ -67,6 +67,8 @@
     allowUnfree = true;
   };
 
+  fonts.fontconfig.enable = true;
+
 # }}}
 
 # Home Manager {{{
