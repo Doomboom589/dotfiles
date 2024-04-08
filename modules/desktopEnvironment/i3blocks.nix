@@ -19,11 +19,7 @@ in
     bars = {
       top = {
         "0-spotify" = {
-	  command = 
-	  ''
-	    echo "<span foreground='${green-3}' background='${bg-1}' size='x-large'> </span>\ 
-	    <span foreground='${bg-4}' background='${green-3}' rise='2pt'><span size='large' > 󰝚 </span>$(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 2 "artist" | tail -n 1 | grep -o '".*"' | sed 's/"//g' | sed 's/&/&amp;/') - $(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 1 "title" | tail -n 1 | grep -o '".*"' | sed 's/"//g' | sed 's/&/&amp;/')<span size='large' > 󰝚 </span></span>"
-	  '';
+	  command = "echo \"<span foreground='${green-3}' background='${bg-1}' size='x-large'> </span><span foreground='${bg-4}' background='${green-3}' rise='2pt'><span size='large' > 󰝚 </span>$(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 2 \"artist\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/') - $(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 1 \"title\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/')<span size='large' > 󰝚 </span></span>\"";
 	  markup = "pango";
 	  interval = 1;
 	  separator_block_width = 0;
