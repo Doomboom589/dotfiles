@@ -45,6 +45,7 @@
     # Fonts
     fira-code-nerdfont
     monaspace
+    noto-fonts-cjk-sans
     # Icons
     kora-icon-theme
     # Applications
