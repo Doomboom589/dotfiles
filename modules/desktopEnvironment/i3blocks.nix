@@ -19,13 +19,13 @@ in
     bars = {
       top = {
         "0-spotify" = {
-	  command = "if pgrep \"spotify\" > /dev/null; then echo \"<span foreground='${green-3}' background='${bg-1}' size='x-large'> </span><span foreground='${bg-4}' background='${green-3}' rise='2pt'><span size='large' > 󰝚 </span>$(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 2 \"artist\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/') - $(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 1 \"title\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/')<span size='large' > 󰝚 </span></span>\"; fi";
+	  command = "if pgrep \"spotify\" > /dev/null; then echo \"<span foreground='${green-3}' background='${bg-1}' size='x-large'> </span><span foreground='${bg-4}' background='${green-3}' rise='2pt'><span size='large' > 󰝚 </span>$(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 2 \"artist\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/') - $(dbus-send --print-reply --session --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | grep -A 1 \"title\" | tail -n 1 | grep -o '\".*\"' | sed 's/\"//g' | sed 's/&/&amp;/')<span size='large' > 󰝚 </span></span><span foreground='${blue-2}' background='${green-3}' size='x-large'> </span>\"; else echo \"<span foreground='${blue-2}' background='${bg-1}' size='x-large'> </span>\"; fi";
 	  markup = "pango";
 	  interval = 1;
 	  separator_block_width = 0;
 	};
 	"1-disk" = {
-	  command = "echo \"<span foreground='${blue-2}' background='${green-3}' size='x-large'> </span><span background='${bg-1}'><span background='${blue-2}' foreground='${grey-1}' size='large' rise='2pt'>  </span><span background='${blue-2}' foreground='${fg-1}' size='small' rise='2pt'> / </span><span background='${blue-2}' size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}') </span></span>\"";
+	  command = "echo \"<span background='${bg-1}'><span background='${blue-2}' foreground='${grey-1}' size='large' rise='2pt'>  </span><span background='${blue-2}' foreground='${fg-1}' size='small' rise='2pt'> / </span><span background='${blue-2}' size='small' rise='2pt'>$(df -h | grep \"/$\" | awk '{print $5}') </span></span>\"";
 	  markup = "pango";
 	  interval = 30;
 	  separator_block_width = 0;
