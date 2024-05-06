@@ -9,7 +9,7 @@ let
   fg-1 = "#daddff";
   red-2 = "#da587d";
   grey-2 = "#595b7e";
-  workspace = { "a" = "1:󰎤 "; "b" = "2:󰎧 "; "c" = "3:󰎪 "; "d" = "4:󰎭 "; "e" = "5:󰎱 "; "f" = "6:󰎳 "; "g" = "7:󰎶 "; "h" = "8:󰎹 "; "i" = "9:󰎼 "; "j" = "0:󰎡 "; };
+  workspace = { "a" = "1:󰎤"; "b" = "2:󰎧"; "c" = "3:󰎪"; "d" = "4:󰎭"; "e" = "5:󰎱"; "f" = "6:󰎳"; "g" = "7:󰎶"; "h" = "8:󰎹"; "i" = "9:󰎼"; "j" = "0:󰎡"; };
 in {
   xsession.windowManager.i3 = {
     enable = true;
@@ -17,16 +17,16 @@ in {
     # assigns workspaces in extraConfig
     extraConfig =
     ''
-      workspace ${workspace.a} output DP-0 HDMI-1
-      workspace ${workspace.b} output DP-0 HDMI-1
-      workspace ${workspace.c} output DP-0 HDMI-1
-      workspace ${workspace.d} output DP-0 HDMI-1
-      workspace ${workspace.e} output DP-0 HDMI-1
-      workspace ${workspace.f} output DP-4 DP-2
-      workspace ${workspace.g} output DP-4 DP-2
-      workspace ${workspace.h} output DP-4 DP-2
-      workspace ${workspace.i} output DP-4 DP-2
-      workspace ${workspace.j} output DP-4 DP-2
+      workspace ${workspace.a} output DP-4 HDMI-1
+      workspace ${workspace.b} output DP-4 HDMI-1
+      workspace ${workspace.c} output DP-4 HDMI-1
+      workspace ${workspace.d} output DP-4 HDMI-1
+      workspace ${workspace.e} output DP-4 HDMI-1
+      workspace ${workspace.f} output DP-0 DP-2
+      workspace ${workspace.g} output DP-0 DP-2
+      workspace ${workspace.h} output DP-0 DP-2
+      workspace ${workspace.i} output DP-0 DP-2
+      workspace ${workspace.j} output DP-0 DP-2
     '';
     config = {
       modifier = mod;
@@ -45,7 +45,6 @@ in {
 	    style = "Medium";
   	    size = 13.0;
 	  };
-	  trayOutput = "DP-0";
 	  trayPadding = 1;
 	  colors = {
 	    background = "${bg-1}";
