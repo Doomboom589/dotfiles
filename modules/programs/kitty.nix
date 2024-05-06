@@ -4,7 +4,7 @@
     enable = true;
     font = {
       name = "Firacode Nerd Font Mono";
-      size = 18;
+      size = 16;
     };
     theme = "Monokai Soda";
     package = pkgs.kitty;
