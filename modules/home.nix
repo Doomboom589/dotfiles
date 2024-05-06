@@ -58,6 +58,9 @@
     rofi-power-menu
     krita
     pavucontrol
+    chromium
+    prismlauncher
+    blender
   ];
 
   home.file = {
