@@ -40,6 +40,7 @@
     cowsay
     pipes
     lolcat
+    unzip
     # Desktop environment
     gtk3
     # Fonts
