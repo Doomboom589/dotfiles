@@ -220,6 +220,9 @@ in {
 	"XF86MonBrightnessDown" = "exec --no-startup-id brightnessctl set 4%-";
         "XF86MonBrightnessUp" = "exec --no-startup-id brightnessctl set 4%+";
 
+	# Wallpaper
+        "${mod}+grave" = "exec shuf -e -n1 $HOME/.config/wallpapers/* | xargs ${pkgs.feh}/bin/feh --bg-scale";
+
 	# Spawn terminal
 	"${mod}+Return" = "exec kitty";
 
