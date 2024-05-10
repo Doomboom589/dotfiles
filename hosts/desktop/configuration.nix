@@ -130,7 +130,10 @@
   #   enableSSHSupport = true;
   # };
 
-  programs.git.enable = true;
+  programs.git = {
+    enable = true;
+    lfs.enable = true;
+  };
   programs.fish.enable = true;
   programs.neovim = {
     enable = true;
