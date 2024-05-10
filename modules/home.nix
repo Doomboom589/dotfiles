@@ -62,6 +62,7 @@
     chromium
     prismlauncher
     blender
+    obsidian
   ];
 
   home.file = {
